@@ -78,19 +78,22 @@
     outline: 0;
     box-shadow: none;
 }
-
-.form-user-name{
-
+/*处理input输入框placeholder字体颜色*/
+.form-input::-webkit-input-placeholder{
+    color: #B4A5A5;
 }
 
-.form-user-name input{
-    
+.form-submit{
+    width: 100%;
+    height: 80px;
+    background: #00C1DE;
+    border: 1px solid #00C1DE;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.8em;
+    border-radius: 2px;
 }
 
-.form-user-password{
-
-}
-
-.form-user-password input{
-    
+.form-submit:hover{
+    background: #04B4CE;
 }

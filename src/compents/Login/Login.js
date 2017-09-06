@@ -29,8 +29,8 @@ export default class Login extends React.Component {
                             <div className="form-user-authcode form-input-ll">
                                 <input className="form-input" type="type" placeholder="验证码"></input>
                             </div>
-                            <div className="form-submit">
-                                <input type="submit"></input>
+                            <div>
+                                <input className="form-submit" type="submit"></input>
                             </div>
                             <div>
                                 <a>忘记密码</a>
