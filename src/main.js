@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import Login from "./compents/Login/Login.js"
 ReactDOM.render(
-    <h5>hello world</h5>,
+    <Login/>,
     document.getElementById('container')
 );
