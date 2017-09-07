@@ -8,6 +8,7 @@ export default class Login extends React.Component {
             <img className="login-background" src="https://accounts.gizwits.com/static/login/login.background.ecc4ca0522ea.jpg"></img>
             <div className="login-2017">
                 <div className="login-2017-topbar">
+                
                     <ul className="login-2017-link">
                         <li>
                             <a href="">首页</a>
@@ -21,20 +22,20 @@ export default class Login extends React.Component {
                                 <label>用户登录</label>
                             </div>
                             <div className="form-user-name form-input-ll">
-                                <input type="text" className="form-input" placeholder="邮箱/用户名/手机号"></input>
+                                <input type="text" className="form-input input-hight-color" placeholder="邮箱/用户名/手机号"></input>
                             </div>
                             <div className="form-user-password form-input-ll">
-                                <input className="form-input" type="password" placeholder="登录密码"></input>
+                                <input className="form-input input-hight-color" type="password" placeholder="登录密码"></input>
                             </div>
                             <div className="form-user-authcode form-input-ll">
-                                <input className="form-input" type="type" placeholder="验证码"></input>
+                                <input className="form-input input-hight-color" type="type" placeholder="验证码"></input>
                             </div>
                             <div>
                                 <input className="form-submit" type="submit"></input>
                             </div>
-                            <div>
-                                <a>忘记密码</a>
-                                <a>用户注册</a>
+                            <div className="link-box">
+                                <a className="forget-password-label label-hover">忘记密码</a>
+                                <a className="user-login-label label-hover">用户注册</a>
                             </div>
                         </div>
                     </div>
