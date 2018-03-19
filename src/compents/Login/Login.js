@@ -1,7 +1,24 @@
 import React from 'react';
-import "./Login.css"
+import "./Login.css";
+import {Link} from 'react-router-dom';
 
 export default class Login extends React.Component {
+
+    constructor(props){
+        super(props);   //拿到父组件中的props
+        console.log('constructor')
+    }
+
+    componentWillMount(){
+        console.log('componentWillMount')
+    }
+    
+    /**
+     * 组件渲染完成
+     */
+    componentDidMount(){
+        console.log('componentDidMount')
+    }
 
     render() {
         return (<div>
@@ -11,7 +28,7 @@ export default class Login extends React.Component {
                 
                     <ul className="login-2017-link">
                         <li>
-                            <a href="">首页</a>
+                           <a href="">首页</a>
                         </li>
                     </ul>
                 </div>
@@ -35,7 +52,7 @@ export default class Login extends React.Component {
                             </div>
                             <div className="link-box">
                                 <a className="forget-password-label label-hover">忘记密码</a>
-                                <a className="user-login-label label-hover">用户注册</a>
+                                <Link to="/register"><a className="user-login-label label-hover">立即注册</a></Link>
                             </div>
                         </div>
                     </div>
