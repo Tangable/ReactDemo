@@ -8,7 +8,6 @@ const InputGroup = Input.Group;
 console.log(styles);
 class Register extends React.Component{
     render(){
-        debugger
         const { form, submitting } = this.props;
         const { getFieldDecorator } = form;
         return(
