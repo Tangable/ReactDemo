@@ -1,25 +1,38 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import "./Register.css";
-
-export default class Register extends React.Component{
+import { createForm } from 'rc-form';
+import { Form, Input, Button, Select, Row, Col, Popover, Progress } from 'antd';
+import styles from "./Register.css";
+const FormItem = Form.Item;
+const {Option} = Select;
+const InputGroup = Input.Group;
+console.log(styles);
+class Register extends React.Component{
     render(){
-        return(<div className="gutter-example">
-                <Row gutter={16}>
-                <Col className="gutter-row" span={6}>
-                    <div className="gutter-box">col-6</div>
-                </Col>
-                <Col className="gutter-row" span={6}>
-                    <div className="gutter-box">col-6</div>
-                </Col>
-                <Col className="gutter-row" span={6}>
-                    <div className="gutter-box">col-6</div>
-                </Col>
-                <Col className="gutter-row" span={6}>
-                    <div className="gutter-box">col-6</div>
-                </Col>
-                </Row>
+        debugger
+        const { form, submitting } = this.props;
+        const { getFieldDecorator } = form;
+        return(
+            <div className={styles.main}>
+               <h3>注册</h3>
+               <Form>
+               <FormItem>
+                    {getFieldDecorator('mail', {
+                    rules: [
+                        {
+                        required: true,
+                        message: '请输入邮箱地址！',
+                        },
+                        {
+                        type: 'email',
+                        message: '邮箱地址格式错误！',
+                        },
+                    ],
+                    })(<Input size="large" placeholder="邮箱" />)}
+            </FormItem>
+               </Form>
             </div>
         );
     }
 }
+
+export default Register = Form.create()(Register);

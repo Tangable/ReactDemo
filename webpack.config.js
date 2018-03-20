@@ -13,7 +13,7 @@ module.exports = {
         		test: /\.css$/,
         		loader: 'style-loader!css-loader'//添加对样式表的处理
       		},
-	        { 
+			{ 
 	        	test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'
 	    	},
 	        { 
@@ -22,7 +22,22 @@ module.exports = {
 	        	query: {
 	        		presets: ['es2015','react']
 	        	}
-	    	}
+			},
+			{
+				test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel',
+				query:{
+					presets: ['react', 'es2015'],
+					plugins: [
+						['import', {
+							libraryName: 'antd',
+							style: 'css'
+						}]
+					]
+				}
+			}
 	    ]
 	},
+	resolveLoader: {
+		moduleExtensions: ["-loader"]
+	}
 };
